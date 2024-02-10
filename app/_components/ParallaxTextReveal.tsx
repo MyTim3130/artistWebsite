@@ -33,67 +33,83 @@ const ParallaxTextReveal = () => {
   //     }})
   // },[])
 
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: "#textsContainer",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true,
-      pin: "#allTexts",
-      markers: true,
-    });
-  }, []);
+  // useEffect(() => {
+  //   ScrollTrigger.create({
+  //     trigger: "#imageWrapper1",
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: true,
+  //     pin: "#Text1",
+  //     markers: true,
+  //   });
+  // }, []);
 
   return (
-    <section className="h-[250vh] w-screen" id="textsContainer">
-      <div className="absolute w-screen h-screen">
-        <div className="relative h-screen w-screen" id="imageWrapper1">
-          <Image
-            src="/images/parallax1.png"
-            objectFit="cover"
-            layout="fill"
-            alt="missingBackground"
-          />
-        </div>
-        <div className="relative h-screen w-screen" id="imageWrapper2">
-          <Image
-            src="/images/parallax2.png"
-            objectFit="cover"
-            layout="fill"
-            alt="missingBackground"
-          />
-        </div>
-        <div className="relative h-screen w-screen" id="imageWrapper3">
-          <Image
-            src="/images/parallax3.png"
-            objectFit="cover"
-            layout="fill"
-            alt="missingBackground"
-          />
-        </div>
-      </div>
-
-      <div className="w-screen flex justify-center" id="allTexts">
-        <span
-          className="flex h-screen w-screen justify-center items-center text-6xl absolute"
+    <>
+      <div
+        className="relative h-screen w-screen overflow-hidden"
+        id="imageWrapper1"
+      >
+      
+        <div
+          className="flex w-screen h-screen justify-center items-center text-6xl absolute z-50"
           id="Text1"
+          data-speed="0.001"
         >
           TEXT1
-        </span>
-        <span
-          className="flex h-screen w-screen justify-center items-center text-6xl absolute"
-          id="Text2"
+        </div>
+       
+      
+        <Image
+          src="/images/parallax1.png"
+          objectFit="cover"
+          layout="fill"
+          alt="missingBackground"
+          data-speed="0.5"
+        />
+      </div>
+      <div
+        className="relative h-screen w-screen overflow-hidden"
+        id="imageWrapper2"
+      >
+        <div className="w-screen h-screen flex justify-center items-center">
+        <div
+          className="flex w-screen h-screen justify-center items-center text-6xl absolute z-50"
+          id="Text1"
+          data-speed="0.001"
         >
-          TEXT2{" "}
-        </span>
-        <span
-          className="flex h-screen w-screen justify-center items-center text-6xl absolute"
-          id="Text3"
+          TEXT2
+        </div>
+       
+        </div>
+        <Image
+          src="/images/parallax2.png"
+          objectFit="cover"
+          layout="fill"
+          alt="missingBackground"
+          data-speed="0.5"
+        />
+      </div>
+      <div className="relative h-screen w-screen overflow-hidden" id="imageWrapper3">
+      <div className="w-screen h-screen flex justify-center items-center">
+      <div
+          className="flex w-screen h-screen justify-center items-center text-6xl absolute z-50"
+          id="Text1"
+          data-speed="0.001"
         >
           TEXT3
-        </span>
+        </div>
+       
+        </div>
+        <Image
+          src="/images/parallax3.png"
+          objectFit="cover"
+          layout="fill"
+          alt="missingBackground"
+          data-speed="0.5"
+        />
       </div>
-    </section>
+    </>
   );
 };
 
