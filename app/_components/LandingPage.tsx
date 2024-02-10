@@ -99,7 +99,7 @@ const LandingPage = () => {
         zIndex="z-0"
       />
       <BackgroundImage
-        source="/images/test4.jpg"
+        source="/images/test2.jpg"
         x={-80}
         y={100}
         id="image4"
