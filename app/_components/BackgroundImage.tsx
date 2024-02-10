@@ -13,12 +13,13 @@ interface BackgroundImageProps {
   y: number;
   id: string;
   start: string;
+  zIndex: string;
 }
 
-const BackgroundImage = ({ source, y, x, id, start }: BackgroundImageProps) => {
+const BackgroundImage = ({ source, y, x, id, start, zIndex }: BackgroundImageProps) => {
   useEffect(() => {
     gsap.fromTo(
-      `.${id}IMAGE`,
+      `#${id}IMAGE`,
       { scale: 1.5 },
       {
         scale: 1,
@@ -73,7 +74,7 @@ const BackgroundImage = ({ source, y, x, id, start }: BackgroundImageProps) => {
     } else if (windowWidth < 1024) {
       gsap.fromTo(
         `.${id}`,
-        { x: x * 2, y: y * 1.5, opacity: 1 },
+        { x: x * 3, y: y * 1, opacity: 1 },
         {
           x: x * 10,
           y: y * 10,
@@ -88,7 +89,7 @@ const BackgroundImage = ({ source, y, x, id, start }: BackgroundImageProps) => {
     } else {
       gsap.fromTo(
         `.${id}`,
-        { x: x * 5, y: y * 1.5, opacity: 1 },
+        { x: x * 6, y: y * 1.7, opacity: 1 },
         {
           x: x * 10,
           y: y * 10,
@@ -103,10 +104,10 @@ const BackgroundImage = ({ source, y, x, id, start }: BackgroundImageProps) => {
     }
   }, [windowWidth]);
   return (
-    <div className="h-screen w-screen absolute flex items-center justify-center -z-10">
+    <div className={clsx("h-screen w-screen absolute flex items-center justify-center", zIndex)}>
       <div
         className={clsx(
-          "h-44 w-32 relative overflow-hidden rounded-md md:h-60 md:w-52 lg:h-96 lg:w-80",
+          "h-44 w-32 relative overflow-hidden rounded-md sm:h-60 sm:w-52 lg:h-96 lg:w-80 drop-shadow-glow",
           id
         )}
       >
@@ -115,7 +116,10 @@ const BackgroundImage = ({ source, y, x, id, start }: BackgroundImageProps) => {
           alt="missing Background Image"
           objectFit="cover"
           layout="fill"
-          className={id + "IMAGE"}
+          id={id + "IMAGE"}
+          
+          
+       
         />
       </div>
     </div>
