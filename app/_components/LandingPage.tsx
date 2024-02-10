@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 const LandingPage = () => {
   useEffect(() => {
     gsap.to("#pinSection", {y:0,
-      scrollTrigger: { pin: "#pinSection", start: "top top", end: "+=100" },
+      scrollTrigger: { pin: "#pinSection", start: "top top", end: "+=1000" },
     });
   }, []);
 
