@@ -24,7 +24,7 @@ const About = () => {
   </p>
 
 </section>
-<div className="h-screen w-screen absolute top-[310vh]">
+<div className="h-screen w-screen absolute top-[210vh]">
 <div className="bg-gradient-to-t from-transparent to-[#151519] h-[20vh]"></div>
 <BackgroundBeams className="-z-50 md:opacity-60" />
 <div className="bg-gradient-to-b from-transparent to-[#151519] h-[20vh] relative top-[60vh]"></div>
