@@ -18,7 +18,7 @@ const ParallaxTextReveal = () => {
 
         }})
 
-        gsap.fromTo("#imageWrapper2",{y:0},{y:-400, scrollTrigger:{
+        gsap.fromTo("#imageWrapper2",{y:-200},{y:-400, scrollTrigger:{
             trigger: '#imageWrapper2',
             start: "top bottom",
             end: "top top",
@@ -26,7 +26,7 @@ const ParallaxTextReveal = () => {
 
         }})
 
-        gsap.fromTo("#imageWrapper3",{y:0},{y:-400, scrollTrigger:{
+        gsap.fromTo("#imageWrapper3",{y:-200},{y:-400, scrollTrigger:{
             trigger: '#imageWrapper3',
             start: "top bottom",
             end: "top top",
@@ -46,7 +46,7 @@ const ParallaxTextReveal = () => {
           className="fixed"
         />
       </div>
-      <div className="h-[120vh] w-screen relative bottom-10" id="imageWrapper2">
+      <div className="h-[120vh] w-screen relative" id="imageWrapper2">
         <Image
           src="/images/parallax2.png"
           objectFit="cover"
@@ -54,7 +54,7 @@ const ParallaxTextReveal = () => {
           alt="missingBackground"
         />
       </div>
-      <div className="h-[120vh] w-screen relative bottom-16" id="imageWrapper3">
+      <div className="h-[120vh] w-screen relative" id="imageWrapper3">
         <Image
           src="/images/parallax3.png"
           objectFit="cover"
