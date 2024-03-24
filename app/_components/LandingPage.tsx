@@ -43,7 +43,7 @@ const LandingPage = () => {
         particleColor="#FFFFFF"
       />
       <BackgroundImage
-        source="/images/test6.jpg"
+        source="/images/test1.jpeg"
         x={1}
         y={1}
         id="image6"
@@ -51,7 +51,7 @@ const LandingPage = () => {
         zIndex="-z-10"
       />
       <BackgroundImage
-        source="/images/test5.jpg"
+        source="/images/test2.jpeg"
         x={-70}
         y={-150}
         id="image5"
@@ -59,7 +59,7 @@ const LandingPage = () => {
         zIndex="z-0"
       />
       <BackgroundImage
-        source="/images/test1.jpg"
+        source="/images/test3.jpeg"
         x={-50}
         y={-19}
         id="image1"
@@ -67,7 +67,7 @@ const LandingPage = () => {
         zIndex="-z-10"
       />
       <BackgroundImage
-        source="/images/test3.jpg"
+        source="/images/test4.jpeg"
         x={99}
         y={80}
         id="image2"
@@ -75,7 +75,7 @@ const LandingPage = () => {
         zIndex="-z-10"
       />
       <BackgroundImage
-        source="/images/test5.jpg"
+        source="/images/test5.jpeg"
         x={39}
         y={-80}
         id="image8"
@@ -83,7 +83,7 @@ const LandingPage = () => {
         zIndex="-z-10"
       />
       <BackgroundImage
-        source="/images/test2.jpg"
+        source="/images/test6.jpeg"
         x={50}
         y={70}
         id="image7"
@@ -91,7 +91,7 @@ const LandingPage = () => {
         zIndex="-z-10"
       />
       <BackgroundImage
-        source="/images/test3.jpg"
+        source="/images/test7.jpeg"
         x={80}
         y={-150}
         id="image3"
@@ -99,7 +99,7 @@ const LandingPage = () => {
         zIndex="z-0"
       />
       <BackgroundImage
-        source="/images/test2.jpg"
+        source="/images/test8.jpeg"
         x={-80}
         y={100}
         id="image4"
@@ -112,7 +112,7 @@ const LandingPage = () => {
           className={clsx("text-5xl lg:text-[10rem] md:text-[8rem] xl:text-[13rem]", title.className)}
           id="heroTitle"
         >
-          XXNAMEXX
+          HAFEIM
         </h1>
       </section>
     </main>
