@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import clsx from "clsx";
@@ -17,7 +17,7 @@ interface BackgroundImageProps {
 }
 
 const BackgroundImage = ({ source, y, x, id, start, zIndex }: BackgroundImageProps) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.fromTo(
       `#${id}IMAGE`,
       { scale: 1.5 },
@@ -42,7 +42,7 @@ const BackgroundImage = ({ source, y, x, id, start, zIndex }: BackgroundImagePro
 
   const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateWidth = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -54,7 +54,7 @@ const BackgroundImage = ({ source, y, x, id, start, zIndex }: BackgroundImagePro
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (windowWidth === 0) return;
     if (windowWidth < 500) {
       gsap.fromTo(

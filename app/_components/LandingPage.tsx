@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 import BackgroundImage from "./BackgroundImage";
@@ -16,7 +16,7 @@ export const title = Nunito({
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.to("#pinSection", {
       y: 0,
       scrollTrigger: { pin: "#pinSection", start: "top top", end: "+=1000" },
