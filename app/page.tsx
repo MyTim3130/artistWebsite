@@ -59,6 +59,7 @@ export default function Home() {
         <button
           className="fixed bottom-4 right-4 bg-transparent p-3 rounded-full shadow-lg hover:opacity-80 transition duration-300 z-50"
           onClick={() => setIsChatOpen(!isChatOpen)}
+          style={{ position: 'fixed', bottom: '20px', right: '20px' }}
         >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a4/GPT-4.png"
@@ -70,11 +71,11 @@ export default function Home() {
         </button>
 
         {isChatOpen && (
-          <div className="fixed bottom-20 right-4 w-80 bg-white border rounded-2xl shadow-lg p-4 z-50">
+          <div className="fixed bottom-20 right-4 w-80 bg-white border rounded-2xl shadow-lg p-4 z-50" style={{ color: 'black' }}>
             <h2 className="text-lg font-bold mb-2">ChatGPT Chatbot</h2>
-            <div className="h-64 overflow-y-auto border rounded-lg p-2 mb-2">
+            <div className="h-64 overflow-y-auto border rounded-lg p-2 mb-2" style={{ color: 'black' }}>
               {messages.map((msg, index) => (
-                <div key={index} className={msg.role === 'user' ? 'text-blue-600 text-right' : 'text-green-600 text-left'}>
+                <div key={index} className={msg.role === 'user' ? 'text-black text-right' : 'text-black text-left'}>
                   {msg.content}
                 </div>
               ))}
@@ -87,6 +88,7 @@ export default function Home() {
                 onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                 className="border rounded-l-lg flex-1 p-2"
                 placeholder="Type your message..."
+                style={{ color: 'black' }}
               />
               <button onClick={sendMessage} className="bg-blue-500 text-white p-2 rounded-r-lg">Send</button>
             </div>
@@ -96,4 +98,5 @@ export default function Home() {
     </Smooth>
   );
 }
+
 
