@@ -57,20 +57,20 @@ export default function Home() {
 
       <div>
         <button
-          className="fixed bottom-4 right-4 bg-transparent p-3 rounded-full shadow-lg hover:opacity-80 transition duration-300"
+          className="fixed bottom-4 right-4 bg-transparent p-3 rounded-full shadow-lg hover:opacity-80 transition duration-300 z-50"
           onClick={() => setIsChatOpen(!isChatOpen)}
         >
-          <Image
+          <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a4/GPT-4.png"
             alt="Chatbot Icon"
             width={50}
             height={50}
-            className="rounded-full"
+            className="rounded-full w-14 h-14 object-cover"
           />
         </button>
 
         {isChatOpen && (
-          <div className="fixed bottom-16 right-4 w-80 bg-white border rounded-2xl shadow-lg p-4">
+          <div className="fixed bottom-20 right-4 w-80 bg-white border rounded-2xl shadow-lg p-4 z-50">
             <h2 className="text-lg font-bold mb-2">ChatGPT Chatbot</h2>
             <div className="h-64 overflow-y-auto border rounded-lg p-2 mb-2">
               {messages.map((msg, index) => (
@@ -96,5 +96,4 @@ export default function Home() {
     </Smooth>
   );
 }
-
 
