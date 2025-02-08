@@ -7,8 +7,13 @@ import ParallaxTextReveal from "./_components/ParallaxTextReveal";
 import Smooth from "./_components/ScrollSmoother";
 import { useState } from "react";
 
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export default function Home() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState("");
 
   const apiKey = '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';
@@ -16,7 +21,7 @@ export default function Home() {
   const sendMessage = async () => {
     if (userInput.trim() === '') return;
 
-    const updatedMessages = [...messages, { role: 'user', content: userInput }];
+    const updatedMessages: Message[] = [...messages, { role: 'user', content: userInput }];
     setMessages(updatedMessages);
     setUserInput("");
 
