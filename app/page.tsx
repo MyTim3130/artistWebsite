@@ -6,7 +6,6 @@ import About1 from "./_components/About1";
 import ParallaxTextReveal from "./_components/ParallaxTextReveal";
 import Smooth from "./_components/ScrollSmoother";
 import { useState } from "react";
-import { FiMessageCircle } from "react-icons/fi";
 
 interface Message {
   role: 'user' | 'assistant';
@@ -58,10 +57,16 @@ export default function Home() {
 
       <div>
         <button
-          className="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
+          className="fixed bottom-4 right-4 bg-transparent p-3 rounded-full shadow-lg hover:opacity-80 transition duration-300"
           onClick={() => setIsChatOpen(!isChatOpen)}
         >
-          <FiMessageCircle size={24} />
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a4/GPT-4.png"
+            alt="Chatbot Icon"
+            width={50}
+            height={50}
+            className="rounded-full"
+          />
         </button>
 
         {isChatOpen && (
@@ -91,4 +96,5 @@ export default function Home() {
     </Smooth>
   );
 }
+
 
